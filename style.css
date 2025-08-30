@@ -91,7 +91,21 @@ a:hover {
   }
 }
 
+/* Media Query khusus untuk tampilan mobile */
+@media (max-width: 768px) {
+  /* Perbaikan tombol "BELI TIKET" supaya tidak bertabrakan dengan teks */
+  .btn-beli-tiket { /* Ganti .btn-beli-tiket dengan class tombol anda */
+    position: relative;
+    margin-top: 10px; /* Atur margin atas agar tombol tidak bertabrakan */
+    z-index: 10; /* Pastikan tombol di atas elemen lain */
+  }
 
+  /* Atur ulang jarak spasi di bawah hero */
+  .hero-section { /* Ganti dengan class hero section sebenarnya */
+    padding-bottom: 20px; /* Kurangi padding bawah */
+    margin-bottom: 0; /* Hilangkan margin bawah berlebih */
+  }
+}
 
 /* Hero Section */
 .main-content {
@@ -475,6 +489,7 @@ a:hover {
     min-height: 250px;
   }
 }
+
 
 
 
