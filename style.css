@@ -112,7 +112,7 @@ a:hover {
 .button-container {
   position: absolute;
   bottom: 30px; /* Paling bawah, agar tidak menabrak teks */
-  left: 20px;
+  left: 40px;
   z-index: 10;
   transform: translateY(10px); /* Geser tambahan ke bawah */
 }
@@ -457,3 +457,4 @@ a:hover {
     transform: translateY(10px);
   }
 }
+
