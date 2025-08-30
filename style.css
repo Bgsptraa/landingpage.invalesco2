@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset dan Style Umum */
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +9,9 @@ body {
   font-family: "Arial", sans-serif;
   background-color: #242424;
   color: white;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Pastikan tidak ada scroll horizontal */
+  padding-top: 80px; /* Untuk menghindari konten tertutup header fixed */
+  scroll-behavior: smooth;
 }
 
 a {
@@ -25,9 +27,9 @@ a:hover {
 /* Header */
 .site-header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* agar logo kiri, nav kanan */
   align-items: center;
-  padding: 20px 20px;
+  padding: 10px 20px;
   background-color: #ffffff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -35,23 +37,30 @@ a:hover {
   top: 0;
   left: 0;
   z-index: 1000;
+  flex-wrap: wrap;
 }
 
 .logo img {
-  height: 60px;
+  height: 50px; /* lebih kecil untuk mobile */
+  max-width: 150px;
+  object-fit: contain;
 }
 
 .main-nav {
   display: flex;
-  gap: 15px;
+  gap: 12px;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  flex: 1;
+  min-width: 0;
 }
 
 .main-nav a {
   font-weight: bold;
-  padding: 10px 15px;
+  padding: 8px 12px;
   color: #000;
   font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 .buy-ticket-link {
@@ -76,44 +85,50 @@ a:hover {
   position: relative;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
-  height: 600px;
-  background-image: url('INVALESCO 2K25 (1200 x 600 piksel) (1).png');
+  margin: 0 auto 60px;
+  overflow: hidden;
+  min-height: 320px;
+  height: auto;
+  background-image: url("INVALESCO 2K25 (1200 x 600 piksel) (1).png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden;
-  margin-top: 80px;
+  border-radius: 12px;
+}
+
+.hero-image {
+  display: none; /* Karena sudah pakai background image */
 }
 
 .button-container {
   position: absolute;
-  bottom: 80px;
-  left: 80px;
+  bottom: 40px;
+  left: 20px;
   z-index: 10;
 }
 
 .buy-ticket-button {
   background: linear-gradient(90deg, #4facfe, #00f2fe);
   color: white;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  padding: 15px 40px;
+  padding: 12px 30px;
   border: none;
   border-radius: 12px;
   cursor: pointer;
   text-transform: uppercase;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
   display: inline-block;
-  min-width: 200px;
+  min-width: 160px;
+  white-space: nowrap;
 }
 
 /* Info Box */
 .info {
   text-align: center;
-  padding: 60px 20px;
+  padding: 40px 20px;
   background-color: #f9f9f9;
   color: #333;
 }
@@ -125,9 +140,11 @@ a:hover {
   max-width: 800px;
   margin: 0 auto;
   background: white;
-  padding: 40px;
+  padding: 30px 20px;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-height: none;
 }
 
 .location-container {
@@ -136,7 +153,7 @@ a:hover {
 }
 
 .location-image {
-  width: 150px;
+  width: 140px;
   height: auto;
   margin-bottom: 10px;
   border-radius: 8px;
@@ -159,7 +176,7 @@ a:hover {
 }
 
 .date {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #007bff;
   margin-top: 10px;
@@ -167,14 +184,14 @@ a:hover {
 
 /* Flashback */
 .flashback-section {
-  padding: 60px 20px;
+  padding: 40px 20px;
   text-align: center;
   background-color: #1a1a1a;
   color: white;
 }
 
 .flashback-section h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 15px;
   color: #00f2fe;
   text-transform: uppercase;
@@ -184,12 +201,14 @@ a:hover {
 .slider-container {
   width: 100%;
   max-width: 800px;
-  height: 500px;
+  height: 350px;
   position: relative;
   overflow: hidden;
   border-radius: 12px;
   margin: 0 auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 .slider {
@@ -205,17 +224,26 @@ a:hover {
   background-size: cover;
   background-position: center;
   flex-shrink: 0;
+  user-select: none;
 }
 
 @keyframes slide {
-  0%, 45% { transform: translateX(0); }
-  50%, 95% { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
+  0%,
+  45% {
+    transform: translateX(0);
+  }
+  50%,
+  95% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .dots {
   position: absolute;
-  bottom: 20px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -235,18 +263,19 @@ a:hover {
   background-color: white;
 }
 
-/* Footer */
+/* Footer Kontak */
 .contact-footer {
   background-color: white;
   color: #333;
-  padding: 50px 20px;
+  padding: 40px 20px;
   text-align: center;
   margin-top: 60px;
   border-top: 1px solid #eee;
+  font-family: "Arial", sans-serif;
 }
 
 .footer-container h3 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   margin-bottom: 20px;
   color: #007bff;
   font-weight: 600;
@@ -256,8 +285,9 @@ a:hover {
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   flex-wrap: wrap;
+  list-style: none;
 }
 
 .social-item {
@@ -267,9 +297,9 @@ a:hover {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
-  width: 90px;
+  width: 80px;
 }
 
 .social-item:hover {
@@ -278,8 +308,8 @@ a:hover {
 }
 
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   margin-bottom: 8px;
   transition: all 0.3s ease;
   border-radius: 8px;
@@ -293,27 +323,144 @@ a:hover {
 
 /* Responsif */
 @media (max-width: 768px) {
-  .main-nav a { font-size: 0.8rem; padding: 8px 12px; }
-  .buy-ticket-link { font-size: 0.8rem; }
-  .logo img { height: 50px; }
-  .main-content { height: 400px; margin-top: 70px; }
-  .button-container { bottom: 60px; left: 60px; }
-  .buy-ticket-button { font-size: 1.4rem; padding: 12px 30px; }
-  .location-image { width: 120px; }
-  .footer-container h3 { font-size: 1.4rem; }
-  .icon { width: 36px; height: 36px; }
-  .social-item { font-size: 0.9rem; width: 80px; }
+  .site-header {
+    padding: 10px 15px;
+  }
+
+  .logo img {
+    height: 45px;
+  }
+
+  .main-nav {
+    gap: 8px;
+  }
+
+  .main-nav a {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+
+  .buy-ticket-link {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+
+  .button-container {
+    bottom: 30px;
+    left: 15px;
+  }
+
+  .buy-ticket-button {
+    font-size: 1.4rem;
+    padding: 10px 25px;
+    min-width: 140px;
+  }
+
+  .info-box {
+    padding: 25px 15px;
+  }
+
+  .location-image {
+    width: 120px;
+  }
+
+  .footer-container h3 {
+    font-size: 1.3rem;
+  }
+
+  .social-links {
+    gap: 25px;
+  }
+
+  .icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .social-item {
+    font-size: 0.85rem;
+    width: 75px;
+  }
+
+  .flashback-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .slider-container {
+    height: 280px;
+  }
 }
 
 @media (max-width: 480px) {
-  .main-nav a { font-size: 0.75rem; padding: 6px 10px; }
-  .buy-ticket-link { font-size: 0.75rem; }
-  .main-content { height: 300px; }
-  .button-container { bottom: 40px; left: 20px; }
-  .buy-ticket-button { font-size: 1.2rem; padding: 10px 25px; }
-  .info-box { padding: 30px 20px; }
-  .location-image { width: 100px; }
-  .footer-container h3 { font-size: 1.3rem; }
-  .icon { width: 34px; height: 34px; }
-  .social-item { font-size: 0.85rem; width: 75px; }
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 15px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .main-nav {
+    width: 100%;
+    justify-content: space-around;
+    gap: 6px;
+  }
+
+  .main-nav a {
+    font-size: 0.75rem;
+    padding: 6px 8px;
+  }
+
+  .buy-ticket-link {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+
+  .button-container {
+    bottom: 20px;
+    left: 10px;
+  }
+
+  .buy-ticket-button {
+    font-size: 1.2rem;
+    padding: 8px 20px;
+    min-width: 120px;
+  }
+
+  .info-box {
+    padding: 20px 10px;
+  }
+
+  .location-image {
+    width: 100px;
+  }
+
+  .footer-container h3 {
+    font-size: 1.2rem;
+  }
+
+  .social-links {
+    gap: 20px;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-item {
+    font-size: 0.8rem;
+    width: 70px;
+  }
+
+  .flashback-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .slider-container {
+    height: 220px;
+  }
 }
