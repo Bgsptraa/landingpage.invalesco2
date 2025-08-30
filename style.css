@@ -111,8 +111,8 @@ a:hover {
 
 .button-container {
   position: absolute;
-  bottom: 60px;
-  left: 20px; /* Tombol dipindah ke kiri */
+  bottom: 90px; /* Lebih rendah agar tidak tertutup nav bar HP */
+  left: 20px;   /* Di kiri bawah, seperti yang kamu lingkari */
   z-index: 10;
 }
 
@@ -381,10 +381,9 @@ a:hover {
     height: 280px;
   }
 
-  /* Tombol di kiri bawah responsif */
   .button-container {
+    bottom: 80px;
     left: 15px;
-    bottom: 50px;
   }
 }
 
@@ -450,9 +449,8 @@ a:hover {
     height: 220px;
   }
 
-  /* Untuk layar sangat kecil */
   .button-container {
+    bottom: 70px;
     left: 10px;
-    bottom: 40px;
   }
 }
