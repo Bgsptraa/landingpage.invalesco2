@@ -83,6 +83,13 @@ a:hover {
   color: white;
   transform: translateY(-2px);
 }
+@media (max-width: 480px) {
+  .buy-ticket-link {
+    padding: 12px 20px; /* buat tombol lebih besar agar mudah ditekan */
+    font-size: 1.1rem;  /* font lebih besar untuk keterbacaan */
+    border-width: 3px;  /* border sedikit lebih tebal agar jelas */
+  }
+}
 
 @media (max-width: 480px) {
   .buy-ticket-link {
@@ -476,6 +483,7 @@ a:hover {
     min-height: 250px;
   }
 }
+
 
 
 
