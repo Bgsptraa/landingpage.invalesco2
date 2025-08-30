@@ -72,6 +72,10 @@ a:hover {
   font-weight: bold;
   font-size: 0.9rem;
   transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
 }
 
 .buy-ticket-link:hover {
@@ -79,6 +83,16 @@ a:hover {
   color: white;
   transform: translateY(-2px);
 }
+
+@media (max-width: 480px) {
+  .buy-ticket-link {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-width: 3px;
+  }
+}
+
+
 
 /* Hero Section */
 .main-content {
@@ -462,5 +476,6 @@ a:hover {
     min-height: 250px;
   }
 }
+
 
 
