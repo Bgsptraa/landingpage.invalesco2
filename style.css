@@ -105,15 +105,6 @@ a:hover {
   user-select: none;
 }
 
-@media (max-width: 480px) {
-  body {
-    padding-top: 100px; /* tambah jarak agar hero tidak tertutup */
-  }
-  .hero-wrapper {
-    margin-top: 20px; /* beri jarak tambahan */
-  }
-
-
 .button-container {
   position: absolute;
   bottom: 30px;
@@ -220,6 +211,7 @@ a:hover {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: relative; /* Tambahan agar dots absolute berada di sini */
 }
 
 .slider {
@@ -254,11 +246,12 @@ a:hover {
 
 .dots {
   position: absolute;
-  bottom: 15px;
+  bottom: 10px; /* lebih dekat ke slider */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
+  z-index: 20;
 }
 
 .dot {
@@ -390,9 +383,15 @@ a:hover {
 
 @media (max-width: 480px) {
   .site-header {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row; /* ubah dari column ke row agar logo dan navbar menyatu */
+    align-items: center;
     gap: 10px;
+    flex-wrap: nowrap; /* hilangkan wrap agar tidak terpisah */
+    padding: 10px 15px;
+  }
+
+  .logo {
+    flex-shrink: 0; /* agar logo tidak mengecil */
   }
 
   .logo img {
@@ -401,8 +400,9 @@ a:hover {
 
   .main-nav {
     width: 100%;
-    justify-content: space-around;
-    gap: 6px;
+    justify-content: flex-end; /* agar navbar di kanan */
+    gap: 8px;
+    flex: 1;
   }
 
   .main-nav a {
@@ -470,4 +470,3 @@ a:hover {
     min-height: 250px;
   }
 }
-
