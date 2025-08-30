@@ -76,7 +76,7 @@ a:hover {
   text-align: center;
   cursor: pointer;
   user-select: none;
-  margin-top: 60px; /* Atur sesuai kebutuhan, bisa ditambah atau dikurangi */
+  margin-top: 100px; /* Atur sesuai kebutuhan, bisa ditambah atau dikurangi */
 }
 
 .buy-ticket-link:hover {
@@ -490,6 +490,7 @@ a:hover {
     min-height: 250px;
   }
 }
+
 
 
 
