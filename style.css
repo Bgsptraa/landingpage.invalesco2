@@ -83,27 +83,12 @@ a:hover {
   color: white;
   transform: translateY(-2px);
 }
-@media (max-width: 480px) {
-  .buy-ticket-link {
-    padding: 12px 20px; /* buat tombol lebih besar agar mudah ditekan */
-    font-size: 1.1rem;  /* font lebih besar untuk keterbacaan */
-    border-width: 3px;  /* border sedikit lebih tebal agar jelas */
-  }
-}
-
-/* Media Query khusus untuk tampilan mobile */
-@media (max-width: 768px) {
-  /* Perbaikan tombol "BELI TIKET" supaya tidak bertabrakan dengan teks */
-  .btn-beli-tiket { /* Ganti .btn-beli-tiket dengan class tombol anda */
-    position: relative;
-    margin-top: 10px; /* Atur margin atas agar tombol tidak bertabrakan */
-    z-index: 10; /* Pastikan tombol di atas elemen lain */
-  }
 
   /* Atur ulang jarak spasi di bawah hero */
   .hero-section { /* Ganti dengan class hero section sebenarnya */
     padding-bottom: 20px; /* Kurangi padding bawah */
     margin-bottom: 0; /* Hilangkan margin bawah berlebih */
+    height: 150px;
   }
 }
 
@@ -490,6 +475,7 @@ a:hover {
     min-height: 250px;
   }
 }
+
 
 
 
