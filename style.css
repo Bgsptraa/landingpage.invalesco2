@@ -111,8 +111,8 @@ a:hover {
 
 .button-container {
   position: absolute;
-  bottom: 25px; /* Lebih ke bawah (dari 30px → 25px) */
-  left: 40px;   /* Sedikit ke kanan (dari 30px → 40px) */
+  bottom: 20px; /* Dari 25px → 20px (lebih ke bawah) */
+  left: 40px;   /* Tetap sedikit ke kanan */
   z-index: 10;
 }
 
@@ -382,7 +382,7 @@ a:hover {
   }
 
   .button-container {
-    bottom: 20px;
+    bottom: 18px;
     left: 35px;
   }
 }
@@ -450,7 +450,7 @@ a:hover {
   }
 
   .button-container {
-    bottom: 18px;
+    bottom: 15px;
     left: 30px;
   }
 }
