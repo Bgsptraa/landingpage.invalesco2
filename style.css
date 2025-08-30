@@ -88,7 +88,7 @@ a:hover {
   .hero-section { /* Ganti dengan class hero section sebenarnya */
     padding-bottom: 20px; /* Kurangi padding bawah */
     margin-bottom: 0; /* Hilangkan margin bawah berlebih */
-    height: 150px;
+    height: 250px;
   }
 }
 
@@ -481,6 +481,7 @@ a:hover {
     min-height: 250px;
   }
 }
+
 
 
 
