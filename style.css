@@ -1,54 +1,34 @@
-/* Reset dan Style Umum */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: "Arial", sans-serif;
+  padding-top: 80px;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
   background-color: #242424;
   color: white;
-  overflow-x: hidden; /* Pastikan tidak ada scroll horizontal */
-  padding-top: 80px; /* Untuk menghindari konten tertutup header fixed */
-  scroll-behavior: smooth;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #4facfe;
 }
 
 /* Header */
 .site-header {
   display: flex;
-  justify-content: space-between; /* agar logo kiri, nav kanan */
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 10px 20px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
   top: 0;
-  left: 0;
+  background: white;
   z-index: 1000;
-  flex-wrap: wrap;
 }
 
 .logo img {
-  height: 50px; /* lebih kecil untuk mobile */
+  height: 50px;
   max-width: 150px;
   object-fit: contain;
 }
 
 .main-nav {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
   justify-content: flex-end;
   flex: 1;
@@ -56,250 +36,140 @@ a:hover {
 }
 
 .main-nav a {
-  font-weight: bold;
+  font-size: 0.9rem;
   padding: 8px 12px;
-  color: #000;
-  font-size: 0.9rem;
   white-space: nowrap;
-}
-
-.buy-ticket-link {
-  border: 2px solid #007bff;
-  border-radius: 6px;
-  padding: 8px 15px;
-  background-color: transparent;
-  color: #007bff;
+  color: #000;
   font-weight: bold;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
 }
 
-.buy-ticket-link:hover {
-  background-color: #007bff;
-  color: white;
-  transform: translateY(-2px);
-}
-
-/* Hero Image */
+/* Hero */
 .main-content {
   position: relative;
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto 60px;
-  overflow: hidden;
   min-height: 320px;
-  height: auto;
   background-image: url("INVALESCO 2K25 (1200 x 600 piksel) (1).png");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   border-radius: 12px;
-}
-
-.hero-image {
-  display: none; /* Karena sudah pakai background image */
 }
 
 .button-container {
   position: absolute;
   bottom: 40px;
   left: 20px;
+  right: 20px;
+  max-width: calc(100% - 40px);
   z-index: 10;
 }
 
 .buy-ticket-button {
-  background: linear-gradient(90deg, #4facfe, #00f2fe);
-  color: white;
   font-size: 1.6rem;
-  font-weight: bold;
   padding: 12px 30px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  text-transform: uppercase;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
   min-width: 160px;
   white-space: nowrap;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  color: white;
+  border-radius: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  text-decoration: none;
+  display: inline-block;
 }
 
-/* Info Box */
-.info {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
+/* Info */
 .info-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 800px;
   margin: 0 auto;
-  background: white;
   padding: 30px 20px;
   border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  background: white;
   width: 100%;
-  max-height: none;
 }
 
-.location-container {
-  text-align: center;
+.location-container,
+.time-container {
   margin-bottom: 20px;
-}
-
-.location-image {
-  width: 140px;
-  height: auto;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.location-container h4,
-.time-container h4 {
-  margin-bottom: 5px;
-  color: #000;
-  font-size: 1.2rem;
-}
-
-.location-container p,
-.time-container p {
-  margin: 0;
-  color: #007bff;
-  font-weight: 600;
-  font-size: 1.3rem;
-}
-
-.date {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #007bff;
-  margin-top: 10px;
+  text-align: center;
 }
 
 /* Flashback */
-.flashback-section {
-  padding: 40px 20px;
-  text-align: center;
-  background-color: #1a1a1a;
-  color: white;
-}
-
-.flashback-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #00f2fe;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
 .slider-container {
-  width: 100%;
   max-width: 800px;
   height: 350px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
   margin: 0 auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  touch-action: pan-y;
-  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-.slider {
-  display: flex;
-  width: 200%;
-  height: 100%;
-  animation: slide 10s infinite;
-}
-
-.slide {
-  width: 50%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  flex-shrink: 0;
-  user-select: none;
-}
-
-@keyframes slide {
-  0%,
-  45% {
-    transform: translateX(0);
+@media (max-width: 768px) {
+  .slider-container {
+    height: 280px;
   }
-  50%,
-  95% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
+}
+
+@media (max-width: 480px) {
+  .slider-container {
+    height: 220px;
   }
 }
 
 .dots {
-  position: absolute;
   bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
 }
 
 .dot {
   width: 12px;
   height: 12px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .dot.active {
   background-color: white;
 }
 
-/* Footer Kontak */
+/* Footer */
 .contact-footer {
-  background-color: white;
-  color: #333;
   padding: 40px 20px;
-  text-align: center;
   margin-top: 60px;
   border-top: 1px solid #eee;
-  font-family: "Arial", sans-serif;
-}
-
-.footer-container h3 {
-  font-size: 1.4rem;
-  margin-bottom: 20px;
-  color: #007bff;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  background: white;
+  color: #333;
+  text-align: center;
 }
 
 .social-links {
+  gap: 25px;
   display: flex;
   justify-content: center;
-  gap: 30px;
   flex-wrap: wrap;
-  list-style: none;
+}
+
+.icon {
+  width: 34px;
+  height: 34px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  opacity: 0.9;
+  transition: all 0.3s ease;
 }
 
 .social-item {
+  font-size: 0.85rem;
+  width: 75px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-decoration: none;
   color: #333;
   font-weight: 500;
-  font-size: 0.9rem;
+  text-decoration: none;
   transition: all 0.3s ease;
-  width: 80px;
 }
 
 .social-item:hover {
@@ -307,21 +177,12 @@ a:hover {
   color: #007bff;
 }
 
-.icon {
-  width: 36px;
-  height: 36px;
-  margin-bottom: 8px;
-  transition: all 0.3s ease;
-  border-radius: 8px;
-  opacity: 0.9;
-}
-
 .social-item:hover .icon {
   transform: scale(1.1);
   opacity: 1;
 }
 
-/* Responsif */
+/* Responsive tweaks */
 @media (max-width: 768px) {
   .site-header {
     padding: 10px 15px;
@@ -331,23 +192,9 @@ a:hover {
     height: 45px;
   }
 
-  .main-nav {
-    gap: 8px;
-  }
-
   .main-nav a {
     font-size: 0.85rem;
     padding: 6px 10px;
-  }
-
-  .buy-ticket-link {
-    font-size: 0.85rem;
-    padding: 6px 12px;
-  }
-
-  .button-container {
-    bottom: 30px;
-    left: 15px;
   }
 
   .buy-ticket-button {
@@ -369,25 +216,17 @@ a:hover {
   }
 
   .social-links {
-    gap: 25px;
+    gap: 20px;
   }
 
   .icon {
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
   }
 
   .social-item {
-    font-size: 0.85rem;
-    width: 75px;
-  }
-
-  .flashback-section h2 {
-    font-size: 1.6rem;
-  }
-
-  .slider-container {
-    height: 280px;
+    font-size: 0.8rem;
+    width: 70px;
   }
 }
 
@@ -396,7 +235,6 @@ a:hover {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    padding: 10px 15px;
   }
 
   .logo img {
@@ -412,16 +250,6 @@ a:hover {
   .main-nav a {
     font-size: 0.75rem;
     padding: 6px 8px;
-  }
-
-  .buy-ticket-link {
-    font-size: 0.75rem;
-    padding: 6px 10px;
-  }
-
-  .button-container {
-    bottom: 20px;
-    left: 10px;
   }
 
   .buy-ticket-button {
@@ -443,24 +271,16 @@ a:hover {
   }
 
   .social-links {
-    gap: 20px;
+    gap: 15px;
   }
 
   .icon {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
   }
 
   .social-item {
-    font-size: 0.8rem;
-    width: 70px;
-  }
-
-  .flashback-section h2 {
-    font-size: 1.4rem;
-  }
-
-  .slider-container {
-    height: 220px;
+    font-size: 0.75rem;
+    width: 65px;
   }
 }
