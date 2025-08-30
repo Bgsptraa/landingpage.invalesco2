@@ -82,8 +82,8 @@ a:hover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-top: 80px;
   overflow: hidden;
+  margin-top: 80px;
 }
 
 .button-container {
