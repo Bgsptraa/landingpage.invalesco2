@@ -111,10 +111,10 @@ a:hover {
 
 .button-container {
   position: absolute;
-  bottom: 40px; /* Diturunkan secara signifikan agar tidak menabrak teks */
+  bottom: 30px; /* Paling bawah, agar tidak menabrak teks */
   left: 20px;
   z-index: 10;
-  transform: translateY(0);
+  transform: translateY(10px); /* Geser tambahan ke bawah */
 }
 
 .buy-ticket-button {
@@ -383,8 +383,9 @@ a:hover {
   }
 
   .button-container {
-    bottom: 35px;
+    bottom: 25px;
     left: 15px;
+    transform: translateY(12px);
   }
 }
 
@@ -451,7 +452,8 @@ a:hover {
   }
 
   .button-container {
-    bottom: 30px;
+    bottom: 20px;
     left: 10px;
+    transform: translateY(10px);
   }
 }
