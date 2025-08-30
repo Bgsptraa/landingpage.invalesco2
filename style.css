@@ -118,17 +118,6 @@ a:hover {
   padding-top: 40px;
 }
 
-.beli-tiket {
-  margin-top: 20px;
-  padding: 10px 30px;
-  background-color: #00bfff;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  display: block;
-}
 
 .button-container {
   position: absolute;
@@ -492,6 +481,7 @@ a:hover {
     min-height: 250px;
   }
 }
+
 
 
 
