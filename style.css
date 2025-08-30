@@ -122,7 +122,7 @@ a:hover {
 .button-container {
   position: absolute;
   bottom: 60px;
-  left: 20px;
+  left: 0px;
   z-index: 10;
 }
      @media only screen and (max-width: 768px) {
@@ -481,6 +481,7 @@ a:hover {
     min-height: 250px;
   }
 }
+
 
 
 
