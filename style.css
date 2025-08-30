@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +9,7 @@ body {
   background-color: #242424;
   color: white;
   overflow-x: hidden;
-  padding-top: 80px; /* agar header fixed tidak menutupi konten */
+  padding-top: 80px;
   scroll-behavior: smooth;
 }
 
@@ -84,14 +83,6 @@ a:hover {
   transform: translateY(-2px);
 }
 
-  /* Atur ulang jarak spasi di bawah hero */
-  .hero-section { /* Ganti dengan class hero section sebenarnya */
-    padding-bottom: 20px; /* Kurangi padding bawah */
-    margin-bottom: 0; /* Hilangkan margin bawah berlebih */
-    height: 300px;
-  }
-}
-
 /* Hero Section */
 .main-content {
   max-width: 1200px;
@@ -118,20 +109,13 @@ a:hover {
   padding-top: 40px;
 }
 
-
 .button-container {
   position: absolute;
   bottom: 60px;
-  left: 0px;
+  right: 40px;
   z-index: 10;
 }
-     @media only screen and (max-width: 768px) {
-       .button-container { 
-         margin-bottom: 0; /* atau sesuaikan */
-         padding-bottom: 0;
-         height: auto;
-       }
-     }
+
 .buy-ticket-button {
   background: linear-gradient(90deg, #4facfe, #00f2fe);
   color: white;
@@ -231,6 +215,7 @@ a:hover {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 
 .slider {
@@ -250,12 +235,10 @@ a:hover {
 }
 
 @keyframes slide {
-  0%,
-  45% {
+  0%, 45% {
     transform: translateX(0);
   }
-  50%,
-  95% {
+  50%, 95% {
     transform: translateX(-50%);
   }
   100% {
@@ -397,6 +380,12 @@ a:hover {
   .slider-container {
     height: 280px;
   }
+
+  /* Responsif tombol hero */
+  .button-container {
+    right: 20px;
+    bottom: 40px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -460,44 +449,10 @@ a:hover {
   .slider-container {
     height: 220px;
   }
-}
 
-@media (max-width: 768px) {
-  .main-content {
-    background-size: contain;
-    background-position: center top;
-    background-repeat: no-repeat;
-    height: auto;
-    min-height: 300px;
+  /* Responsif tombol hero di layar sangat kecil */
+  .button-container {
+    right: 15px;
+    bottom: 30px;
   }
 }
-
-@media (max-width: 480px) {
-  .main-content {
-    background-size: contain;
-    background-position: center top;
-    background-repeat: no-repeat;
-    height: auto;
-    min-height: 250px;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
