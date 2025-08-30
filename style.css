@@ -77,13 +77,13 @@ a:hover {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  overflow: hidden;
   height: 600px;
   background-image: url('INVALESCO 2K25 (1200 x 600 piksel) (1).png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin-top: 80px;
+  overflow: hidden;
 }
 
 .button-container {
@@ -296,6 +296,7 @@ a:hover {
   .main-nav a { font-size: 0.8rem; padding: 8px 12px; }
   .buy-ticket-link { font-size: 0.8rem; }
   .logo img { height: 50px; }
+  .main-content { height: 400px; margin-top: 70px; }
   .button-container { bottom: 60px; left: 60px; }
   .buy-ticket-button { font-size: 1.4rem; padding: 12px 30px; }
   .location-image { width: 120px; }
@@ -307,73 +308,12 @@ a:hover {
 @media (max-width: 480px) {
   .main-nav a { font-size: 0.75rem; padding: 6px 10px; }
   .buy-ticket-link { font-size: 0.75rem; }
-  .button-container { bottom: 50px; left: 50px; }
+  .main-content { height: 300px; }
+  .button-container { bottom: 40px; left: 20px; }
   .buy-ticket-button { font-size: 1.2rem; padding: 10px 25px; }
-  .info-box { padding: 30px; }
+  .info-box { padding: 30px 20px; }
   .location-image { width: 100px; }
   .footer-container h3 { font-size: 1.3rem; }
   .icon { width: 34px; height: 34px; }
   .social-item { font-size: 0.85rem; width: 75px; }
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  overflow-x: hidden; /* ❌ Cegah scroll horizontal */
-}
-
-main, section, footer {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-@media (max-width: 768px) {
-  .main-content {
-    height: 400px;
-    margin-top: 70px;
-  }
-
-  .button-container {
-    bottom: 60px;
-    left: 30px;
-  }
-
-  .buy-ticket-button {
-    font-size: 1.4rem;
-    padding: 12px 30px;
-  }
-
-  .info-box {
-    padding: 30px 20px;
-  }
-
-  .location-image {
-    width: 120px;
-  }
-}
-
-@media (max-width: 480px) {
-  .main-content {
-    height: 300px;
-  }
-
-  .button-container {
-    bottom: 40px;
-    left: 20px;
-  }
-
-  .buy-ticket-button {
-    font-size: 1.2rem;
-    padding: 10px 25px;
-  }
-
-  .main-nav a {
-    font-size: 0.8rem;
-    padding: 6px 10px;
-  }
 }
