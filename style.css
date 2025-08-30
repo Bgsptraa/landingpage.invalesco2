@@ -111,9 +111,10 @@ a:hover {
 
 .button-container {
   position: absolute;
-  bottom: 90px; /* Lebih rendah agar tidak tertutup nav bar HP */
-  left: 20px;   /* Di kiri bawah, seperti yang kamu lingkari */
+  bottom: 40px; /* Diturunkan secara signifikan agar tidak menabrak teks */
+  left: 20px;
   z-index: 10;
+  transform: translateY(0);
 }
 
 .buy-ticket-button {
@@ -382,7 +383,7 @@ a:hover {
   }
 
   .button-container {
-    bottom: 80px;
+    bottom: 35px;
     left: 15px;
   }
 }
@@ -450,7 +451,7 @@ a:hover {
   }
 
   .button-container {
-    bottom: 70px;
+    bottom: 30px;
     left: 10px;
   }
 }
