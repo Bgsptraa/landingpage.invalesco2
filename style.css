@@ -103,6 +103,7 @@ a:hover {
   max-height: 600px;
   border-radius: 12px;
   user-select: none;
+   padding-top: 50px;
 }
 
 .button-container {
@@ -461,4 +462,5 @@ a:hover {
     min-height: 250px;
   }
 }
+
 
