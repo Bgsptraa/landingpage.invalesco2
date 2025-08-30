@@ -91,14 +91,6 @@ a:hover {
   }
 }
 
-@media (max-width: 480px) {
-  .buy-ticket-link {
-    padding: 12px 20px;
-    font-size: 1.1rem;
-    border-width: 3px;
-  }
-}
-
 
 
 /* Hero Section */
@@ -483,6 +475,7 @@ a:hover {
     min-height: 250px;
   }
 }
+
 
 
 
