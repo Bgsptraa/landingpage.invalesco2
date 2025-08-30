@@ -8,8 +8,8 @@
 body {
   font-family: "Arial", sans-serif;
   background-color: #242424;
-  color: #242424;
-  overflow-x: hidden;
+  color: white;
+  overflow-x: hidden; /* Pastikan tidak ada scroll horizontal */
 }
 
 a {
@@ -22,11 +22,12 @@ a:hover {
   color: #4facfe;
 }
 
+/* Header */
 .site-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 20px; /* Kurangi padding kiri-kanan */
+  padding: 20px 20px;
   background-color: #ffffff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -36,66 +37,54 @@ a:hover {
   z-index: 1000;
 }
 
-.main-nav {
-  display: flex;
-  gap: 15px; /* Kurangi jarak antar menu */
-}
-
-.main-nav a {
-  font-weight: bold;
-  padding: 10px 15px; /* Kurangi padding teks */
-  color: #000;
-}
-
-/* Efek border untuk "Beli Tiket" */
-.buy-ticket-link {
-  border: 2px solid #007bff; /* Border biru */
-  border-radius: 6px;
-  padding: 8px 15px;
-  background-color: transparent;
-  color: #007bff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.buy-ticket-link:hover {
-  background-color: #007bff;
-  color: rgb(255, 255, 255);
-  transform: translateY(-2px);
-}
-
 .logo img {
-  height: 80px;
+  height: 60px; /* Lebih kecil untuk mobile */
 }
 
 .main-nav {
   display: flex;
-  gap: 40px;
+  gap: 15px;
+  flex-wrap: wrap; /* Agar menu tidak tumpang tindih */
 }
 
 .main-nav a {
   font-weight: bold;
   padding: 10px 15px;
   color: #000;
+  font-size: 0.9rem;
 }
 
-.main-nav a:hover {
+.buy-ticket-link {
+  border: 2px solid #007bff;
+  border-radius: 6px;
+  padding: 8px 15px;
+  background-color: transparent;
   color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
 }
 
+.buy-ticket-link:hover {
+  background-color: #007bff;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Hero Image */
 .main-content {
   position: relative;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  overflow: hidden; /* ✅ Ini penting! Agar bagian yang keluar tersembunyi */
+  overflow: hidden;
   height: 600px;
   background-image: url("INVALESCO 2K25 (1200 x 600 piksel) (1).png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-top: 110px; /* Jarak dari navbar */
+  margin-top: 80px;
 }
 
 .button-container {
@@ -122,7 +111,7 @@ a:hover {
   min-width: 200px;
 }
 
-/* Informasi Lokasi dan Waktu */
+/* Info Box */
 .info {
   text-align: center;
   padding: 60px 20px;
@@ -134,7 +123,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 800px; /* Lebih lebar */
+  max-width: 800px;
   margin: 0 auto;
   background: white;
   padding: 40px;
@@ -179,7 +168,7 @@ a:hover {
   margin-top: 10px;
 }
 
-/* Flashback Invalesco */
+/* Flashback */
 .flashback-section {
   padding: 60px 20px;
   text-align: center;
@@ -195,13 +184,6 @@ a:hover {
   letter-spacing: 2px;
 }
 
-.flashback-section p {
-  font-size: 1.1rem;
-  color: #ccc;
-  margin-bottom: 30px;
-}
-
-/* Slider */
 .slider-container {
   width: 100%;
   max-width: 800px;
@@ -229,17 +211,9 @@ a:hover {
 }
 
 @keyframes slide {
-  0%,
-  45% {
-    transform: translateX(0);
-  }
-  50%,
-  95% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+  0%, 45% { transform: translateX(0); }
+  50%, 95% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 }
 
 .dots {
@@ -263,8 +237,8 @@ a:hover {
 .dot.active {
   background-color: white;
 }
+
 /* Footer Kontak */
-/* Footer Kontak - Desain Ringan & Modern */
 .contact-footer {
   background-color: white;
   color: #333;
@@ -300,7 +274,7 @@ a:hover {
   font-weight: 500;
   font-size: 0.95rem;
   transition: all 0.3s ease;
-  width: 90px; /* Kontrol lebar */
+  width: 90px;
 }
 
 .social-item:hover {
@@ -322,21 +296,44 @@ a:hover {
   opacity: 1;
 }
 
-/* Efek warna ikon */
-.social-item.whatsapp .icon {
-  filter: brightness(1.05);
-}
-
-.social-item.tiktok .icon {
-  filter: brightness(1.1) contrast(1.05);
-}
-
-.social-item.instagram .icon {
-  filter: contrast(1.1);
-}
-
 /* Responsif */
 @media (max-width: 768px) {
+  .main-nav {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .main-nav a {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+
+  .buy-ticket-link {
+    font-size: 0.8rem;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .button-container {
+    bottom: 60px;
+    left: 60px;
+  }
+
+  .buy-ticket-button {
+    font-size: 1.4rem;
+    padding: 12px 30px;
+  }
+
+  .info-box {
+    padding: 30px;
+  }
+
+  .location-image {
+    width: 120px;
+  }
+
   .footer-container h3 {
     font-size: 1.4rem;
   }
@@ -357,6 +354,37 @@ a:hover {
 }
 
 @media (max-width: 480px) {
+  .main-nav {
+    gap: 8px;
+  }
+
+  .main-nav a {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+
+  .buy-ticket-link {
+    font-size: 0.75rem;
+  }
+
+  .button-container {
+    bottom: 50px;
+    left: 50px;
+  }
+
+  .buy-ticket-button {
+    font-size: 1.2rem;
+    padding: 10px 25px;
+  }
+
+  .info-box {
+    padding: 25px;
+  }
+
+  .location-image {
+    width: 100px;
+  }
+
   .footer-container h3 {
     font-size: 1.3rem;
   }
@@ -371,6 +399,7 @@ a:hover {
   }
 
   .social-item {
+    font-size: 0.85rem;
     width: 75px;
   }
 }
