@@ -111,10 +111,9 @@ a:hover {
 
 .button-container {
   position: absolute;
-  bottom: 30px;
-  left: 80px; /* Digeser ke kanan dari 20px → 80px */
+  bottom: 40px;
+  left: 30px; /* Posisi netral: tidak terlalu kiri/kanan */
   z-index: 10;
-  transform: translateY(10px);
 }
 
 .buy-ticket-button {
@@ -383,9 +382,8 @@ a:hover {
   }
 
   .button-container {
-    bottom: 25px;
-    left: 70px; /* Agar tetap sedikit ke kanan di tablet */
-    transform: translateY(12px);
+    bottom: 35px;
+    left: 25px;
   }
 }
 
@@ -452,8 +450,7 @@ a:hover {
   }
 
   .button-container {
-    bottom: 20px;
-    left: 60px; /* Tetap sedikit ke kanan di HP kecil */
-    transform: translateY(10px);
+    bottom: 30px;
+    left: 20px;
   }
 }
