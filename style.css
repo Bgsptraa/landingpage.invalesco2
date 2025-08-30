@@ -48,11 +48,15 @@ body {
   position: relative;
   max-width: 1200px;
   margin: 0 auto 60px;
-  min-height: 320px;
+  width: 100%;
+  height: 60vw; /* tinggi dinamis berdasarkan lebar viewport */
+  max-height: 600px;
   background-image: url("INVALESCO 2K25 (1200 x 600 piksel) (1).png");
-  background-size: cover;
-  background-position: center;
+  background-size: contain; /* ganti dari cover ke contain */
+  background-repeat: no-repeat;
+  background-position: center center;
   border-radius: 12px;
+  overflow: hidden;
 }
 
 .button-container {
@@ -284,3 +288,4 @@ body {
     width: 65px;
   }
 }
+
