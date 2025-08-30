@@ -1,4 +1,4 @@
-/* Reset dan Style Umum */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +9,7 @@ body {
   font-family: "Arial", sans-serif;
   background-color: #242424;
   color: white;
-  overflow-x: hidden; /* Pastikan tidak ada scroll horizontal */
+  overflow-x: hidden;
 }
 
 a {
@@ -38,13 +38,13 @@ a:hover {
 }
 
 .logo img {
-  height: 60px; /* Lebih kecil untuk mobile */
+  height: 60px;
 }
 
 .main-nav {
   display: flex;
   gap: 15px;
-  flex-wrap: wrap; /* Agar menu tidak tumpang tindih */
+  flex-wrap: wrap;
 }
 
 .main-nav a {
@@ -60,7 +60,6 @@ a:hover {
   padding: 8px 15px;
   background-color: transparent;
   color: #007bff;
-  text-decoration: none;
   font-weight: bold;
   font-size: 0.9rem;
   transition: all 0.3s ease;
@@ -105,7 +104,7 @@ a:hover {
   cursor: pointer;
   text-transform: uppercase;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
   text-decoration: none;
   display: inline-block;
   min-width: 200px;
@@ -129,8 +128,6 @@ a:hover {
   padding: 40px;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-height: 400px;
 }
 
 .location-container {
@@ -238,7 +235,7 @@ a:hover {
   background-color: white;
 }
 
-/* Footer Kontak */
+/* Footer */
 .contact-footer {
   background-color: white;
   color: #333;
@@ -246,7 +243,6 @@ a:hover {
   text-align: center;
   margin-top: 60px;
   border-top: 1px solid #eee;
-  font-family: "Arial", sans-serif;
 }
 
 .footer-container h3 {
@@ -262,7 +258,6 @@ a:hover {
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
-  list-style: none;
 }
 
 .social-item {
@@ -298,108 +293,25 @@ a:hover {
 
 /* Responsif */
 @media (max-width: 768px) {
-  .main-nav {
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  .main-nav a {
-    font-size: 0.8rem;
-    padding: 8px 12px;
-  }
-
-  .buy-ticket-link {
-    font-size: 0.8rem;
-  }
-
-  .logo img {
-    height: 50px;
-  }
-
-  .button-container {
-    bottom: 60px;
-    left: 60px;
-  }
-
-  .buy-ticket-button {
-    font-size: 1.4rem;
-    padding: 12px 30px;
-  }
-
-  .info-box {
-    padding: 30px;
-  }
-
-  .location-image {
-    width: 120px;
-  }
-
-  .footer-container h3 {
-    font-size: 1.4rem;
-  }
-
-  .social-links {
-    gap: 30px;
-  }
-
-  .icon {
-    width: 36px;
-    height: 36px;
-  }
-
-  .social-item {
-    font-size: 0.9rem;
-    width: 80px;
-  }
+  .main-nav a { font-size: 0.8rem; padding: 8px 12px; }
+  .buy-ticket-link { font-size: 0.8rem; }
+  .logo img { height: 50px; }
+  .button-container { bottom: 60px; left: 60px; }
+  .buy-ticket-button { font-size: 1.4rem; padding: 12px 30px; }
+  .location-image { width: 120px; }
+  .footer-container h3 { font-size: 1.4rem; }
+  .icon { width: 36px; height: 36px; }
+  .social-item { font-size: 0.9rem; width: 80px; }
 }
 
 @media (max-width: 480px) {
-  .main-nav {
-    gap: 8px;
-  }
-
-  .main-nav a {
-    font-size: 0.75rem;
-    padding: 6px 10px;
-  }
-
-  .buy-ticket-link {
-    font-size: 0.75rem;
-  }
-
-  .button-container {
-    bottom: 50px;
-    left: 50px;
-  }
-
-  .buy-ticket-button {
-    font-size: 1.2rem;
-    padding: 10px 25px;
-  }
-
-  .info-box {
-    padding: 25px;
-  }
-
-  .location-image {
-    width: 100px;
-  }
-
-  .footer-container h3 {
-    font-size: 1.3rem;
-  }
-
-  .social-links {
-    gap: 25px;
-  }
-
-  .icon {
-    width: 34px;
-    height: 34px;
-  }
-
-  .social-item {
-    font-size: 0.85rem;
-    width: 75px;
-  }
+  .main-nav a { font-size: 0.75rem; padding: 6px 10px; }
+  .buy-ticket-link { font-size: 0.75rem; }
+  .button-container { bottom: 50px; left: 50px; }
+  .buy-ticket-button { font-size: 1.2rem; padding: 10px 25px; }
+  .info-box { padding: 30px; }
+  .location-image { width: 100px; }
+  .footer-container h3 { font-size: 1.3rem; }
+  .icon { width: 34px; height: 34px; }
+  .social-item { font-size: 0.85rem; width: 75px; }
 }
