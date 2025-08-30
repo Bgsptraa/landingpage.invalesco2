@@ -112,7 +112,7 @@ a:hover {
 .button-container {
   position: absolute;
   bottom: 60px;
-  right: 40px;
+  left: 20px; /* Tombol dipindah ke kiri */
   z-index: 10;
 }
 
@@ -381,10 +381,10 @@ a:hover {
     height: 280px;
   }
 
-  /* Responsif tombol hero */
+  /* Tombol di kiri bawah responsif */
   .button-container {
-    right: 20px;
-    bottom: 40px;
+    left: 15px;
+    bottom: 50px;
   }
 }
 
@@ -450,9 +450,9 @@ a:hover {
     height: 220px;
   }
 
-  /* Responsif tombol hero di layar sangat kecil */
+  /* Untuk layar sangat kecil */
   .button-container {
-    right: 15px;
-    bottom: 30px;
+    left: 10px;
+    bottom: 40px;
   }
 }
