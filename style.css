@@ -105,6 +105,15 @@ a:hover {
   user-select: none;
 }
 
+@media (max-width: 480px) {
+  body {
+    padding-top: 100px; /* tambah jarak agar hero tidak tertutup */
+  }
+  .hero-wrapper {
+    margin-top: 20px; /* beri jarak tambahan */
+  }
+
+
 .button-container {
   position: absolute;
   bottom: 30px;
@@ -461,3 +470,4 @@ a:hover {
     min-height: 250px;
   }
 }
+
