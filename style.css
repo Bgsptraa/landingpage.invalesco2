@@ -1,10 +1,4 @@
-     @media only screen and (max-width: 768px) {
-       .nama-kelas { 
-         margin-bottom: 0; /* atau sesuaikan */
-         padding-bottom: 0;
-         height: auto;
-       }
-     }
+
 * {
   margin: 0;
   padding: 0;
@@ -130,7 +124,13 @@ a:hover {
   left: 20px;
   z-index: 10;
 }
-
+     @media only screen and (max-width: 768px) {
+       .button-container { 
+         margin-bottom: 0; /* atau sesuaikan */
+         padding-bottom: 0;
+         height: auto;
+       }
+     }
 .buy-ticket-button {
   background: linear-gradient(90deg, #4facfe, #00f2fe);
   color: white;
