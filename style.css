@@ -111,8 +111,8 @@ a:hover {
 
 .button-container {
   position: absolute;
-  bottom: 20px; /* Dari 25px → 20px (lebih ke bawah) */
-  left: 40px;   /* Tetap sedikit ke kanan */
+  bottom: 20px; 
+  left: 40px;   
   z-index: 10;
 }
 
@@ -454,3 +454,4 @@ a:hover {
     left: 30px;
   }
 }
+
